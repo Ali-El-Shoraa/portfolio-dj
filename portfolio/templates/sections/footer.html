@@ -1,0 +1,59 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+
+<footer class="bg-[#00012b]">
+  <div class="container">
+    <div class="content">
+      <nav class="">
+        <header>Ali's Portfolio</header>
+
+        <div class="text">
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
+          <p>Keep Rising. Connect with me over live chat!</p>
+        </div>
+      </nav>
+
+      <nav>
+        <header>QuickLinks</header>
+
+        <ul class="list">
+          {% for link in links_footer %}
+          <li>
+            <a href="{{ link.link }}"><i class="fas fa-chevron-circle-right"></i>{{ link.name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <nav>
+        <header>Contact Info</header>
+
+        <ul class="contact">
+          <li class="flex items-center gap-2 css-1c2fuzs" style="animation-delay: 0ms">
+            <span><i class="fas fa-phone"></i></span>+201550859246
+          </li>
+          <li class="flex items-center gap-2 css-1c2fuzs" style="animation-delay: 100ms">
+            <span><i class="fas fa-map-marker-alt"></i></span>ali.m.elshoraa@gmail.com
+          </li>
+          <li class="flex items-center gap-2 css-1c2fuzs" style="animation-delay: 200ms">
+            <span><i class="fas fa-envelope"></i></span>Cairo/Egypt
+          </li>
+        </ul>
+
+        <ul class="social-links">
+          {% for obj in social_data %}
+          <li>
+            <a target="_blank" href="{{ obj.link }}" class="social-link" rel="noreferrer">
+              {{ obj.icon|safe }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+
+    <hr />
+    <p class="designed">Designed By <span>Ali El-Shoraa</span></p>
+  </div>
+</footer>

@@ -1,0 +1,58 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+
+<section id="contact" class="contact">
+  <h3 class="header">
+    <i class="fas fa-headset"></i>
+    Get In <span>Touch</span>
+  </h3>
+
+  <div class="container">
+    <img src="{% static 'imgs/contact.png' %}" alt="" />
+
+    <form class="w-[500px] max-w-full space-y-4">
+      <div class="box-input">
+        <input
+          type="text"
+          placeholder="Name"
+          name="user_name"
+          class="h-12 sp-input"
+          required=""
+        /><i class="fas fa-user"></i>
+      </div>
+
+      <div class="box-input">
+        <input
+          type="email"
+          placeholder="Email"
+          name="user_email"
+          class="h-12 sp-input"
+          required=""
+        /><i class="fas fa-envelope"></i>
+      </div>
+
+      <div class="box-input">
+        <input
+          type="tel"
+          placeholder="Phone"
+          name="user_phone"
+          class="h-12 sp-input"
+          required=""
+        /><i class="fas fa-phone"></i>
+      </div>
+
+      <div class="box-textarea">
+        <textarea
+          placeholder="Message"
+          class="pt-3 h-32 resize-none sp-textarea"
+          name="message"
+          required=""
+        ></textarea
+        ><i class="fas fa-comment-dots"></i>
+      </div>
+
+      <button type="submit" class="sp-button-components">Submit</button>
+    </form>
+  </div>
+</section>

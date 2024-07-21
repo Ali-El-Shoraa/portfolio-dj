@@ -1,0 +1,51 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+
+<section id="about">
+  <h3 class="header">
+    <i class="fas fa-user"></i>
+    About
+    <span>Me</span>
+  </h3>
+
+  <div class="container">
+    <!-- <div class=""> -->
+    <img src="{% static 'imgs/ali-eui1.jpg' %}" alt="Ali's Photo" class="" />
+    <!-- </div> -->
+
+    <div class="text">
+      <!-- <div class=""> -->
+      <div class="title">
+        <h3 class="">I'm Ali</h3>
+        <span class="">Front End Developer</span>
+      </div>
+      <!-- </div> -->
+
+      <div class="description">
+        <p>
+          Eager web developer seeking first position, proficient in HTML, CSS, JavaScript, Python,
+          Tailwind, React.js, Next.js and Django Passionate about technology, problem-solving, and
+          committed to continuous learning for dynamic project contributions and a successful web
+          development career.
+        </p>
+      </div>
+
+      <div class="content">
+        <p><span class="">Email </span>: ali.m.elshoraa@gmail.com</p>
+        <p><span class="">Phone </span>: +201550859246</p>
+      </div>
+
+      <div class="">
+        <!-- <a
+          href="{% static 'pdf/Ali_El-Shoraa_Resume.pdf' %}"
+          target="_blank"
+          class="sp-button-components"
+          >Resume</a
+        > -->
+
+        <a href="{{ cv_url }}" target="_blank" class="sp-button-components">Resume</a>
+      </div>
+    </div>
+  </div>
+</section>

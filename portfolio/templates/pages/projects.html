@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+<!-- ****************************************************************** -->
+
+{% load static %}
+<!-- ****************************************************************** -->
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/projectsPage.css' %}" />
+{% endblock links %}
+
+<!-- ****************************************************************** -->
+
+{% block main %}
+<section class="projects-page">
+  <div class="container">
+    <header>
+      <a href="/"><i class="fas fa-arrow-left"></i></a>
+
+      <h3>All Projects</h3>
+    </header>
+
+    <div class="cards">
+      {% for project in projects %}
+      <div class="sp-hover-box">
+        <img src="{{ project.image.url }}" alt="{{ project.name }}" class="" />
+
+        <div class="sp-text">
+          <h4 class="title">{{ project.name }}</h4>
+
+          <div class="box-content">
+            <p class="des">{{ project.description }}</p>
+
+            <div class="btns">
+              <a href="{{ project.demo_url }}" class="btn-demo" target="_blank">Demo</a>
+              <a href="{{ project.github_url }}" class="btn-github ml-4" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock main %}
+
+<!-- ****************************************************************** -->
