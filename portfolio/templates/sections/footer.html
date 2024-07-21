@@ -20,7 +20,9 @@
         <ul class="list">
           {% for link in links_footer %}
           <li>
-            <a href="{{ link.link }}"><i class="fas fa-chevron-circle-right"></i>{{ link.name }}</a>
+            <a href="#{{ link.link }}"
+              ><i class="fas fa-chevron-circle-right"></i>{{ link.name }}</a
+            >
           </li>
           {% endfor %}
         </ul>
