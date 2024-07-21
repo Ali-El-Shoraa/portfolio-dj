@@ -1,0 +1,53 @@
+section#about {
+  margin-top: 4rem;
+  background-color: #181d27;
+  color: white;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      /* gap: 2rem; */
+    }
+
+    img {
+      border-radius: 0.75rem;
+      width: 500px;
+    }
+
+    .text {
+      max-width: 42rem;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+      }
+
+      .description {
+        line-height: 1.6;
+      }
+
+      .content {
+        line-height: 1.6;
+        span {
+          color: #44b78b;
+        }
+      }
+    }
+  }
+}
